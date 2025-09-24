@@ -1,22 +1,21 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
     char name[50];
     char *p;
     int length = 0;
 
-    cout << "Enter your name: ";
+    cout << "Enter any string : ";
     cin.getline(name, 50);
 
-    p = name;  
+    p = name;
 
-    for (; *p != '\0'; p++) 
+    for (p = name; *p; p++)
     {
-        length++;
+        length = p - name;
     }
-       
-    
-    cout << "Total characters = " << length << endl;
 
+    cout << "Total characters = " << length << endl;
 }
